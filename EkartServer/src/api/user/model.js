@@ -20,7 +20,7 @@ const userSchema = new Schema({
     required: true,
     minlength: 6
   },
-  username: {
+  name: {
     type: String,
     index: true,
     trim: true
@@ -29,6 +29,10 @@ const userSchema = new Schema({
     type: String,
     enum: roles,
     default: 'user'
+  },
+  picture: {
+    type: String,
+    trim: true
   }
 }, {
   timestamps: true
